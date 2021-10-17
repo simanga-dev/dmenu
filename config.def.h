@@ -2,15 +2,16 @@
 /* Default settings; can be overriden by command line. */
 
 static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
+static int fuzzy = 0;                      /* -F  option; if 0, dmenu doesn't use fuzzy matching     */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-	"Input Mono:size=10"
+	"JetBrainsMono-Regular:size=10"
 };
-static const char *prompt      = "      ";      /* -p  option; prompt to the left of input field */
+static const char *prompt      = "    ";      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#080808" },
-	[SchemeSel] = { "#eeeeee", "#005577" },
+	[SchemeNorm] = { "#a9b1d6", "#080808" },
+	[SchemeSel] = { "#c0caf5", "#164846" },
 	[SchemeOut] = { "#000000", "#00ffff" },
 };
 /* -l and -g options; controls number of lines and columns in grid if > 0 */

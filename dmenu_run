@@ -1,2 +1,10 @@
 #!/bin/sh
-dmenu_path | dmenu "$@" | ${SHELL:-"/bin/sh"} &
+termcmd='st -t "Notes" -c "Notes"  zsh -c'
+test -s $HOME/.dmenurc && . $HOME/.dmenurc
+
+cmd="$(dmenu_path | dmenu $@)"
+case $cmd in
+    *\; ) ${termcmd} "$(printf "%s" "${cmd}" | cut -d';' -f1); read;";;
+    * ) ${cmd} ;;
+esac
+exit
