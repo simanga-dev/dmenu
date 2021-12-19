@@ -10,8 +10,8 @@ static const char *fonts[] = {
 static const char *prompt      = "    ";      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#a9b1d6", "#080808" },
-	[SchemeSel] = { "#c0caf5", "#164846" },
+	[SchemeNorm] = { "#a9b1d6", "#121212" },
+	[SchemeSel] = { "#c0caf5", "#2e4274" },
 	[SchemeOut] = { "#000000", "#00ffff" },
 };
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
