@@ -11,7 +11,7 @@ static const char *prompt      = "";      /* -p  option; prompt to the left of i
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
 	[SchemeNorm] = { "#a9b1d6", "#121212" },
-	[SchemeSel] = { "#c0caf5", "#2e4274" },
+	[SchemeSel] = { "#c0caf5", "#005577" },
 	[SchemeOut] = { "#000000", "#00ffff" },
 };
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
