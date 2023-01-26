@@ -12,10 +12,12 @@ static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
 	[SchemeNorm] = { "#a9b1d6", "#121212" },
 	[SchemeSel] = { "#c0caf5", "#005577" },
+	[SchemeSelHighlight] = { "#ffc978", "#005577" },
+	[SchemeNormHighlight] = { "#ffc978", "#222222" },
 	[SchemeOut] = { "#000000", "#00ffff" },
 };
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
-static unsigned int lines      = 0;
+static unsigned int lines      = 12;
 static unsigned int columns    = 4;
 
 /*
