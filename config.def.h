@@ -7,6 +7,7 @@ static int fuzzy = 1;                      /* -F  option; if 0, dmenu doesn't us
 static const char *fonts[] = {
 	"JetBrainsMono-Regular:size=11"
 };
+static const unsigned int alpha = 0xf0;
 static const char *prompt      = "";      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
@@ -16,6 +17,18 @@ static const char *colors[SchemeLast][2] = {
 	[SchemeNormHighlight] = { "#ffc978", "#222222" },
 	[SchemeOut] = { "#000000", "#00ffff" },
 };
+
+
+static const unsigned int alphas[SchemeLast][2] = {
+	[SchemeNorm] = { OPAQUE, alpha },
+	[SchemeSel] = { OPAQUE, alpha },
+	[SchemeSelHighlight] = { OPAQUE, alpha },
+	[SchemeNormHighlight] = { OPAQUE, alpha },
+	[SchemeOut] = { OPAQUE, alpha },
+};
+
+
+
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
 static unsigned int lines      = 12;
 static unsigned int columns    = 4;
